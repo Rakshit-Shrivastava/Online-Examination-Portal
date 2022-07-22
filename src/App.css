@@ -36,3 +36,590 @@
     transform: rotate(360deg);
   }
 }
+
+/* ********** User-defined CSS *********** */
+
+/* ********** Utility classes *********** */
+.center {
+  display: grid;
+  place-items: center;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* ********** Header design *********** */
+.headerContainer {
+  width: 100%;
+}
+
+header {
+  background-color: beige;
+  text-align: center;
+}
+
+/* ********** Navbar design *********** */
+
+.navbar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 30px;
+  align-content: center;
+  background-color: #eee;
+}
+
+.navbar nav {
+  display: grid;
+  grid-template-columns: repeat(2, 100px);
+  justify-content: space-evenly;
+}
+
+.navbar .message {
+  background-color: whitesmoke;
+  text-align: center;
+}
+
+/* ********** Body design *********** */
+
+.bodyContainer {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  height: min-content;
+}
+
+.bodyContainer .sideBar {
+  background-color: blanchedalmond;
+  display: flex;
+  flex-direction: column;
+}
+
+.bodyContainer .sideBar a {
+  display: block;
+  margin: 10px;
+  border-bottom: 2px solid gainsboro;
+}
+
+.bodyContainer .contentArea {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, minmax(200px, min-content));
+  grid-gap: 5px;
+}
+
+.bodyContainer .contentArea .contentBox {
+  background-color: #eee;
+  border: 2px solid black;
+  padding: 10px;
+}
+
+.bodyContainer .contentArea .contentBox1 ul li {
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px 0;
+}
+
+.bodyContainer .contentArea .contentBox1 ul li label {
+  flex: 1;
+}
+
+.bodyContainer .contentArea .contentBox1 ul li input {
+  flex: 3;
+}
+
+.bodyContainer .contentArea .contentBox3 {
+  position: relative;
+}
+
+.bodyContainer .contentArea .contentBox3 .startBtn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  padding: 10px;
+  width: 100px;
+}
+
+/* ********** Footer design *********** */
+
+#footer {
+  border: 2px solid slateblue;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+}
+
+/* ********** Exam Page design *********** */
+
+.examPage {
+  display: flex;
+  height: 550px;
+}
+
+.examPage .examPage-sidebar {
+  border: 2px solid saddlebrown;
+  width: 20%;
+  /* height: 550px; */
+}
+
+.examPage .examPage-sidebar h3 {
+  text-align: center;
+}
+
+.examPage .examPage-sidebar .examPage-sidebar-numbers {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.examPage .examPage-sidebar .examPage-sidebar-numbers p {
+  text-align: center;
+  width: 40px;
+  border-radius: 50px;
+  /* background-color: rgb(133, 211, 133); */
+  margin: 10px;
+  padding: 10px;
+}
+
+.examPage .examPage-body {
+  width: 80%;
+  /* height: 550px; */
+  overflow-y: auto;
+}
+
+.examPage .examPage-body .examPage-body-questions {
+  border: 2px solid cadetblue;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.examPage .examPage-sidebar h3 {
+  margin-top: 10px;
+}
+.examPage .examPage-sidebar-time {
+  text-align: center;
+}
+
+.examPage .examPage-sidebar {
+  position: relative;
+}
+
+.examPage .examPage-sidebar .submitBtn button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+/* ********** Login Page design *********** */
+
+.login {
+  height: 85vh;
+  width: 100%;
+}
+.login .login_form {
+  width: 500px;
+  border: 2px solid gray;
+}
+.login .login_form ul li {
+  display: flex;
+  padding: 10px;
+  justify-content: flex-end;
+}
+
+.login .login_form ul li label {
+  flex: 1;
+}
+
+.login .login_form ul li input {
+  flex: 3;
+}
+
+.login .login_form ul li button {
+  margin-left: 10px;
+}
+/* ********** Signup Page design *********** */
+
+.signup {
+  height: 85vh;
+  width: 100%;
+}
+
+.signup .selection {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.signup .selection input {
+  margin-left: 10px;
+}
+
+.signup .abc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.signup .signup_form {
+  border: 2px solid grey;
+  width: 500px;
+}
+
+.signup .signup_form ul li {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.signup .signup_form ul li label {
+  flex: 1;
+}
+
+.signup .signup_form ul li input {
+  flex: 3;
+}
+
+.signup .signup_form ul li button {
+  margin-left: 10px;
+}
+
+/* ********** Create Exam Page design *********** */
+
+.createExam {
+  width: 100%;
+  height: min-content;
+  background-color: #eee;
+}
+
+.createExam .createExamForm {
+  padding: 10px;
+}
+
+.createExam .createExamForm ul li {
+  display: flex;
+  padding: 10px;
+  justify-content: flex-end;
+}
+
+.createExam .createExamForm ul li label {
+  flex: 1;
+  padding: 5px;
+}
+
+.createExam .createExamForm ul li input {
+  flex: 3;
+  padding: 5px;
+}
+
+.createExam .createExamForm button {
+  padding: 5px;
+  width: 100px;
+  border-radius: 5px;
+}
+
+/* ********** Student profile design *********** */
+.profileStudent {
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  margin-top: 80px;
+}
+
+.profileStudent .profileStudent_form {
+  width: 500px;
+  height: min-content;
+}
+
+.profileStudent .profileStudent_form ul li {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.profileStudent .profileStudent_form ul li label {
+  flex: 1;
+}
+
+.profileStudent .profileStudent_form ul li input {
+  flex: 3;
+}
+/* *******************Testing************************* */
+
+.tableContainer {
+  border: 2px solid coral;
+  /* width: 100%; */
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+}
+
+.tableContainer .timeTable thead,
+tbody {
+  display: block;
+}
+
+.tableContainer .timeTable thead tr {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.tableContainer .timeTable thead th {
+  width: 100%;
+  margin-top: 10px;
+  line-height: 30px;
+  border-bottom: 2px solid #282c34;
+}
+
+.tableContainer .timeTable tbody input,
+.tableContainer .subTableContainer input {
+  margin: 5px;
+  line-height: 20px;
+}
+
+.tableContainer form button {
+  margin: 10px;
+  padding: 3px;
+  border-radius: 5px;
+}
+.tableContainer .subTableContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+/* ************* Time table ************ */
+.timetableContainer {
+  height: 90%;
+}
+
+.timetableContainer thead {
+  display: block;
+  /* width: 100%; */
+  /* margin: 0; */
+  border: 2px solid #282c34;
+}
+
+.timetableContainer thead th {
+  width: 200px;
+}
+
+.timetableContainer .timeTable tbody tr {
+  display: flex;
+  justify-content: space-around;
+}
+
+.timetableContainer .timeTable tbody tr td {
+  width: 100%;
+  height: 30px;
+  text-align: center;
+}
+
+/* ********** Show Question design *********** */
+.showQuestionContainer,
+.showTimetableContainer {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.showQuestionContainer .showFilter,
+.showTimetableContainer .showFilter {
+  background-color: gray;
+  min-height: 20%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.showQuestionContainer .showFilter form,
+.showTimetableContainer .showFilter form {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10px;
+}
+
+.showQuestionContainer .showFilter form label,
+.showTimetableContainer .showFilter form label {
+  margin: 0px 5px;
+}
+
+.showQuestionContainer .showFilter form select,
+.showTimetableContainer .showFilter form select {
+  border-radius: 5px;
+  padding: 3px;
+}
+
+.showQuestionContainer .showFilter form button,
+.showTimetableContainer .showFilter form button {
+  padding: 3px;
+  width: 50px;
+  border-radius: 5px;
+}
+
+.showQuestionContainer
+  .showQuestionContainerQuestion
+  .showTimetableContainer
+  .showTimetableContainerTimetable {
+  min-height: 80%;
+}
+
+/* ********** Show Question Accordian design *********** */
+
+.showQuestionContainer
+  .showQuestionContainerQuestion
+  .accordian
+  .showTimetableContainer
+  .showTimetableContainerTimetable
+  .accordian {
+  width: 100%;
+}
+
+.showQuestionContainer
+  .showQuestionContainerQuestion
+  .accordian
+  .accordianToggle,
+.showTimetableContainer
+  .showTimetableContainerTimetable
+  .accordian
+  .accordianToggle {
+  display: none;
+}
+
+.showQuestionContainer
+  .showQuestionContainerQuestion
+  .accordian
+  .accordianTab
+  label,
+.showTimetableContainer
+  .showTimetableContainerTimetable
+  .accordian
+  .accordianTab
+  label {
+  color: gray;
+  background: #eee;
+  line-height: 24px;
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+  display: block;
+  cursor: pointer;
+  padding: 12px 40px 12px 20px;
+  border-bottom: 2px solid white;
+  border-radius: 5px;
+}
+
+.showQuestionContainer
+  .showQuestionContainerQuestion
+  .accordian
+  .accordianTab
+  .accordianContent,
+.showTimetableContainer
+  .showTimetableContainerTimetable
+  .accordian
+  .accordianTab
+  .accordianContent {
+  max-height: 0;
+  transition: all 0.4s;
+  overflow: hidden;
+  background: gray;
+  color: white;
+  border-radius: 5px;
+  margin-left: 50px;
+}
+
+.showQuestionContainer
+  .showQuestionContainerQuestion
+  .accordian
+  .accordianTab
+  .accordianContent
+  ul,
+.showTimetableContainer
+  .showTimetableContainerTimetable
+  .accordian
+  .accordianTab
+  .accordianContent
+  ul {
+  padding: 20px;
+  line-height: 20px;
+}
+
+.showQuestionContainer
+  .showQuestionContainerQuestion
+  .accordian
+  .accordianTab
+  .accordianContent
+  .CA,
+.showTimetableContainer
+  .showTimetableContainerTimetable
+  .accordian
+  .accordianTab
+  .accordianContent
+  .CA {
+  margin-left: 20px;
+  padding-bottom: 20px;
+  line-height: 20px;
+}
+
+.showQuestionContainer
+  .showQuestionContainerQuestion
+  .accordian
+  .accordianTab
+  .accordianToggle:checked
+  ~ .accordianContent,
+.showTimetableContainer
+  .showTimetableContainerTimetable
+  .accordian
+  .accordianTab
+  .accordianToggle:checked
+  ~ .accordianContent {
+  max-height: 100vh;
+}
+
+.showQuestionContainer
+  .showQuestionContainerQuestion
+  .accordian
+  .accordianTab
+  > label:after,
+.showTimetableContainer
+  .showTimetableContainerTimetable
+  .accordian
+  .accordianTab
+  > label:after {
+  content: "\f078";
+  font-family: fontawesome;
+  position: absolute;
+  top: 13px;
+  right: 20px;
+  transform: rotate(90deg);
+  transition: transform 0.3s;
+}
+
+.showQuestionContainer
+  .showQuestionContainerQuestion
+  .accordian
+  .accordianTab
+  .accordianToggle:checked
+  ~ label::after,
+.showTimetableContainer
+  .showTimetableContainerTimetable
+  .accordian
+  .accordianTab
+  .accordianToggle:checked
+  ~ label::after {
+  transform: rotate(0deg);
+}

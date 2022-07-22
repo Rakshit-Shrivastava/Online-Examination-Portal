@@ -1,0 +1,132 @@
+import React, { useRef, useState, useEffect } from 'react'
+
+const CreateTimetable = () => {
+
+  const inputTag = useRef();
+
+  const [table, setTable] = useState({
+    date: "",
+    day: "",
+    subject: ""
+  })
+
+  const [first, setfirst] = useState()
+
+  const [displayTable, setdisplayTable] = useState("")
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setTable(() => {
+      return {
+        ...table, [name]: value
+      }
+    })
+  }
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setdisplayTable(table);
+  }
+
+  useEffect(() => {
+    setfirst(prompt("Enter number"))
+  }, [])
+
+  const displayRow = () => {
+    const row = [];
+    for (let index = 0; index < first; index++) {
+      row.push(
+        <div key={index} className="row">
+          <input type="text" placeholder={"Enter date"} ref={inputTag} name='date' onChange={handleChange} value={table.date} />
+          <input type="text" placeholder={"Enter day"} ref={inputTag} name='day' onChange={handleChange} value={table.day} />
+          <input type="text" placeholder={"Enter subject"} ref={inputTag} name='subject' onChange={handleChange} value={table.subject} />
+          <br />
+        </div>
+      )
+    }
+    <div className='test'>
+      {console.log(row)}
+    </div>
+    return row;
+  }
+
+  return (
+    <div className='abc'>
+      <form action="" onSubmit={handleSubmit}>
+        <table className="time-table center">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Day</th>
+              <th>Subject</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{displayRow()}</td>
+            </tr>
+          </tbody>
+        </table>
+        <button type='submit'>Submit</button>
+      </form>
+
+      <h1>{displayTable.date}</h1>
+      <h1>{displayTable.day}</h1>
+      <h1>{displayTable.subject}</h1>
+
+
+    </div>
+  )
+}
+
+export default CreateTimetable
+
+
+/* ********** Timetable design *********** */
+
+table.time-table {
+  width: 100%;
+  /* border-collapse: collapse; */
+  /* border-spacing: 0; */
+  border: 2px solid forestgreen;
+}
+
+/* To display the block as level element */
+table.time-table tbody,
+table.time-table thead {
+  display: block;
+}
+
+thead tr th {
+  height: 40px;
+  line-height: 40px;
+}
+
+table.time-table tbody {
+  /* Set the height of table body */
+  max-height: 165px;
+
+  /* Set vertical scroll */
+  overflow-y: auto;
+
+  /* Hide the horizontal scroll */
+  overflow-x: hidden;
+}
+
+tbody td{
+  width: 100%;
+}
+
+thead th {
+  width: 200px;
+}
+
+th {
+  border-bottom: 1px solid black;
+}
+
+td {
+  text-align: center;
+  height: 30px;
+  padding-left: 20px;
+}
